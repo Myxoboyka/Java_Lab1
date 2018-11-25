@@ -1,12 +1,11 @@
-//класс для автоматичесого предоставления автоинкремируемого id
-//реализован на шаблоне синглтон
+//ГЄГ«Г Г±Г± Г¤Г«Гї Г ГўГІГ®Г¬Г ГІГЁГ·ГҐГ±Г®ГЈГ® ГЇГ°ГҐГ¤Г®Г±ГІГ ГўГ«ГҐГ­ГЁГї Г ГўГІГ®ГЁГ­ГЄГ°ГҐГ¬ГЁГ°ГіГҐГ¬Г®ГЈГ® id
 public class IdGetter {
     private static final int NUM_OF_ID = 100;
     private static IdGetter instance;
     private static int counter;
     private static String[] id;
 
-    //реализация синглтона
+    //Г°ГҐГ Г«ГЁГ§Г Г¶ГЁГї Г±ГЁГ­ГЈГ«ГІГ®Г­Г 
     public static IdGetter getInstance() {
         if (instance == null){
             instance = new IdGetter();
@@ -21,10 +20,10 @@ public class IdGetter {
 
     private IdGetter() {
     }
-    //метод для получения id
+    //Г¬ГҐГІГ®Г¤ Г¤Г«Гї ГЇГ®Г«ГіГ·ГҐГ­ГЁГї id
     public String getId(){
         if(counter == NUM_OF_ID) {
-            return "Кончились номера";
+            return "ГЉГ®Г­Г·ГЁГ«ГЁГ±Гј Г­Г®Г¬ГҐГ°Г ";
         } else return id[counter++];
     }
 }
